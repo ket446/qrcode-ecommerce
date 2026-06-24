@@ -1,75 +1,135 @@
-# Podcast Manager API
+# 🎙️ Podcast Manager API
 
-Projeto desenvolvido durante o desafio da DIO com o objetivo de criar uma Web API utilizando Node.js e TypeScript sem frameworks.
+Projeto desenvolvido durante o desafio da DIO utilizando Node.js e TypeScript sem frameworks.
 
 ## Objetivo
 
-Criar uma API capaz de listar e filtrar podcasts por categoria.
+Criar uma API REST simples para gerenciamento e consulta de podcasts.
+
+---
 
 ## Tecnologias Utilizadas
 
 - Node.js
 - TypeScript
-- TSX
 - HTTP Nativo
-- File System (FS)
+- TSX
 
-## Funcionalidades
+---
 
-- Listar podcasts
-- Filtrar podcasts por categoria
-- Retornar dados em formato JSON
+## Estrutura do Projeto
 
-## Como Executar
+```bash
+src/
+├── data/
+├── models/
+├── routes.ts
+└── server.ts
+```
 
-### Clonar o projeto
+---
 
+## Instalação
+
+Clone o repositório:
+
+```bash
 git clone https://github.com/seu-usuario/podcast-manager-api.git
+```
 
-### Instalar dependências
+Entre na pasta:
 
+```bash
+cd podcast-manager-api
+```
+
+Instale as dependências:
+
+```bash
 npm install
+```
 
-### Executar
+---
 
-npm run start:dev
+## Executar em Desenvolvimento
 
-## Rotas
+```bash
+npm run dev
+```
 
-### Listar Podcasts
+---
 
-GET /api/list
+## Build
 
-### Filtrar por Categoria
+```bash
+npm run build
+```
 
-GET /api/episode?p=tecnologia
+---
 
-## Melhorias Implementadas
+## Executar Produção
 
-- Adição de novas categorias
-- Tratamento de erros
-- Organização das camadas da aplicação
-- Documentação da API
+```bash
+npm start
+```
 
-## Aprendizados
+---
 
-Neste projeto pratiquei:
+## Endpoints
 
-- TypeScript
-- Arquitetura em camadas
-- Criação de APIs sem Express
-- Manipulação de requisições HTTP
+### Listar todos os podcasts
 
-## Referências
+```http
+GET /api/podcasts
+```
 
-Projeto base:
+Resposta:
 
-https://github.com/felipeAguiarCode/node-ts-webapi-without-frameworks-podcast-menager
+```json
+[
+  {
+    "id": 1,
+    "title": "Tech Talks",
+    "category": "Tecnologia",
+    "host": "João Silva"
+  }
+]
+```
 
-Documentação TypeScript:
+---
 
-https://www.typescriptlang.org/
+### Buscar por categoria
 
-Documentação Node.js:
+```http
+GET /api/podcasts/category/Tecnologia
+```
 
-https://nodejs.org/
+Resposta:
+
+```json
+[
+  {
+    "id": 1,
+    "title": "Tech Talks",
+    "category": "Tecnologia",
+    "host": "João Silva"
+  }
+]
+```
+
+---
+
+## Melhorias Futuras
+
+- CRUD completo
+- Banco de dados PostgreSQL
+- Docker
+- Swagger
+- Testes automatizados
+- Deploy na Render
+
+---
+
+## Autor
+
+Desenvolvido como projeto prático da DIO.
