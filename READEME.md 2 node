@@ -1,0 +1,121 @@
+# 🛒 QR Code E-commerce
+
+Projeto desenvolvido durante o desafio da DIO com o objetivo de praticar Node.js através da criação de um gerador de QR Code para aplicações de e-commerce.
+
+## 📖 Descrição
+
+A aplicação permite gerar QR Codes diretamente pelo terminal, facilitando a criação de links para produtos, páginas de pagamento, promoções e outras funcionalidades comuns em plataformas de comércio eletrônico.
+
+## 🎯 Objetivos do Projeto
+
+- Aprender conceitos fundamentais do Node.js.
+- Trabalhar com pacotes externos via NPM.
+- Organizar projetos utilizando módulos.
+- Gerar QR Codes dinamicamente.
+- Aplicar boas práticas de desenvolvimento.
+
+## 🛠 Tecnologias Utilizadas
+
+- Node.js
+- JavaScript
+- NPM
+
+## 📂 Estrutura do Projeto
+
+```text
+qrcode-ecommerce/
+│
+├── src/
+│   ├── prompts/
+│   ├── services/
+│   └── index.js
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## ⚙️ Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/ket446/qrcode-ecommerce.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd qrcode-ecommerce
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+## ▶️ Executando o Projeto
+
+```bash
+npm run start
+```
+
+ou
+
+```bash
+node src/index.js
+```
+
+## 💻 Exemplo de Utilização
+
+```javascript
+import qr from "qrcode-terminal";
+
+const url = "https://meusite.com/produto";
+
+qr.generate(url, { small: true }, function (qrcode) {
+  console.log(qrcode);
+});
+```
+
+## 🚀 Funcionalidades
+
+- Geração de QR Code via terminal.
+- Conversão de URLs em QR Codes.
+- Estrutura modularizada.
+- Fácil manutenção e expansão.
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+- Modularização de código.
+- Estruturação de aplicações Node.js.
+- Gerenciamento de dependências.
+- Programação assíncrona.
+- Integração com bibliotecas externas.
+
+## 🔗 Referências
+
+Projeto desenvolvido como desafio da plataforma DIO.
+
+Repositório do projeto:
+
+https://github.com/ket446/qrcode-ecommerce
+
+## 📸 Demonstração
+
+Adicione uma captura de tela da execução do projeto:
+
+```markdown
+![QR Code Gerado](./assets/qrcode-demo.png)
+```
+
+## 👨‍💻 Autor
+
+Ket446
+
+## 📄 Licença
+
+Projeto desenvolvido para fins educacionais.
