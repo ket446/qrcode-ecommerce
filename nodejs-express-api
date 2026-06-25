@@ -1,0 +1,181 @@
+# 🚀 API REST com Node.js e Express
+
+Projeto desenvolvido durante o bootcamp da DIO com o objetivo de aprender os conceitos fundamentais de construção de APIs REST utilizando Node.js e Express.
+
+## 📖 Sobre o Projeto
+
+Esta aplicação implementa uma API REST simples utilizando Express, permitindo realizar operações básicas de manipulação de dados.
+
+O projeto foi desenvolvido para praticar:
+
+- Criação de servidores com Node.js
+- Utilização do framework Express
+- Definição de rotas
+- Manipulação de requisições HTTP
+- Estruturação de projetos backend
+- Boas práticas de desenvolvimento
+
+## 🛠 Tecnologias Utilizadas
+
+- Node.js
+- Express.js
+- JavaScript
+- NPM
+
+## 📂 Estrutura do Projeto
+
+```text
+nodejs-express-api/
+│
+├── src/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   └── app.js
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## ⚙️ Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/SEU-USUARIO/nodejs-express-api.git
+```
+
+Acesse o diretório:
+
+```bash
+cd nodejs-express-api
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+## ▶️ Executando o Projeto
+
+Inicie a aplicação:
+
+```bash
+npm start
+```
+
+ou
+
+```bash
+node src/app.js
+```
+
+A API ficará disponível em:
+
+```text
+http://localhost:3000
+```
+
+## 📡 Exemplo de Rotas
+
+### Listar recursos
+
+```http
+GET /api/items
+```
+
+### Buscar recurso por ID
+
+```http
+GET /api/items/:id
+```
+
+### Criar recurso
+
+```http
+POST /api/items
+```
+
+### Atualizar recurso
+
+```http
+PUT /api/items/:id
+```
+
+### Remover recurso
+
+```http
+DELETE /api/items/:id
+```
+
+## 💻 Exemplo de Código
+
+```javascript
+const express = require("express");
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "API funcionando com sucesso!"
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Servidor iniciado na porta 3000");
+});
+```
+
+## 🎯 Funcionalidades
+
+- Criação de servidor HTTP
+- Gerenciamento de rotas
+- Recebimento de parâmetros
+- Respostas em JSON
+- Estrutura modularizada
+- Integração com Express
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram aplicados conceitos como:
+
+- APIs REST
+- Métodos HTTP
+- Middlewares
+- Organização de código
+- Tratamento de requisições
+- Desenvolvimento Backend com Node.js
+
+## 🔗 Referências
+
+Projeto base disponibilizado pela DIO:
+
+https://github.com/digitalinnovationone/nodejs-express-api
+
+Documentação oficial do Express:
+
+https://expressjs.com/
+
+Documentação oficial do Node.js:
+
+https://nodejs.org/
+
+## 📸 Demonstração
+
+Adicione capturas de tela ou exemplos de requisições realizadas pela API.
+
+Exemplo:
+
+```md
+![API em execução](./assets/api-running.png)
+```
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Ket446** durante o bootcamp da DIO.
+
+## 📄 Licença
+
+Projeto desenvolvido para fins educacionais.
